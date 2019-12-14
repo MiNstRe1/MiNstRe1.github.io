@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-radar.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -81,7 +88,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="MiNstRe1的个人博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;12&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives1&#x2F;2019&#x2F;12&#x2F;index.html">
 <meta property="og:site_name" content="MiNstRe1的个人博客">
 <meta property="article:author" content="MiNstRe1">
 <meta name="twitter:card" content="summary">
@@ -114,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/12/"/>
+  <link rel="canonical" href="http://yoursite.com/archives1/2019/12/"/>
 
 
 
@@ -178,8 +185,6 @@
         <li class="menu-item menu-item-home">
           <a href="/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
             首页
           </a>
         </li>
@@ -187,8 +192,6 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -198,8 +201,6 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
             分类
           </a>
         </li>
@@ -207,8 +208,6 @@
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -220,8 +219,6 @@
           
             <a href="javascript:;" class="popup-trigger">
           
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -404,6 +401,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/0.png"
+                alt="MiNstRe1" />
+            
               <p class="site-author-name" itemprop="name">MiNstRe1</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -413,7 +414,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%20%7C%7C">
               
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
@@ -433,6 +434,18 @@
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
+                    <a href="/images/QQ.jpg" target="_blank" title="qq">
+                      
+                        <i class="fa fa-fw fa-globe"></i>qq</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/images/weixin.png" target="_blank" title="weixin">
+                      
+                        <i class="fa fa-fw fa-globe"></i>weixin</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
                     <a href="https://github.com/MiNstRe1" target="_blank" title="GitHub">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
@@ -447,7 +460,13 @@
                   <span class="links-of-author-item">
                     <a href="https://www.zhihu.com/people/bai-zhi-ming-nai/activities" target="_blank" title="知乎">
                       
-                        <i class="fa fa-fw fa-zhihu"></i>知乎</a>
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://space.bilibili.com/3924088?spm_id_from=333.788.b_62696c692d6865616465722d6d.20" target="_blank" title="bilibili">
+                      
+                        <i class="fa fa-fw fa-globe"></i>bilibili</a>
                   </span>
                 
             </div>
@@ -549,9 +568,14 @@
   
 
 
+  
 
 
 
+
+
+  
+  
 
 
 
@@ -587,6 +611,21 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
   
 
 
@@ -648,6 +687,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'dRqCqL6dWgstAIg7hX5ddzQx-gzGzoHsz',
+        appKey: 'sd4LDNmVkJxMcYuB8V1hP535',
+        placeholder: 'Just go go',
+        avatar:'/images/avatar.png',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
